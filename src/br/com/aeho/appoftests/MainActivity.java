@@ -38,10 +38,10 @@ public class MainActivity extends Activity {
 	boolean TRANSITION_DONE = false;
 	static BitmapDrawable gymBackgroundDrawable;
 
-	private static final String[] atividades = { "GsonTesting","ActivityForResult",
-			"Intents", "Services", "Notifications", "StyledDialogs",
-			"UniversalImageLoader", "Maps", "PagerSliding", "ListWithPickers",
-			"VolleyActivity" };
+	private static final String[] atividades = { "GsonTesting",
+			"ActivityForResult", "Intents", "Services", "Notifications",
+			"StyledDialogs", "UniversalImageLoader", "Maps", "PagerSliding",
+			"ListWithPickers", "VolleyActivity" };
 	private static final String TAG = "MainActivity";
 
 	@Override
@@ -49,8 +49,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		initialize();
-		teste_gson();
-
 		set_adapters();
 		prepare_image_loader();
 		final LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -107,17 +105,6 @@ public class MainActivity extends Activity {
 			}
 		});
 
-	}
-
-	
-	private void teste_gson() {
-		final String sJson = "{\"pessoa\":[{\"nome\":\"ciro\",\"sobrenome\":\"costa\"}]}";
-		Gson gson = new Gson();
-		Class tipo = GsonObjects.Tribo.class;
-		GsonObjects.Tribo tribo = gson.fromJson(sJson, tipo);
-		for (GsonObjects.Pessoa pessoa : tribo.pessoa) {
-			Log.v("GSON", pessoa.toString());
-		}
 	}
 
 	private void change_background_image(Drawable drawable0,
