@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppOfTests</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="ab_result_cancel">Cancelar</string>
+    <string name="ab_result_accept">Aceitar</string>
+    
+</resources>
